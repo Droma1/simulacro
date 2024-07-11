@@ -1,0 +1,29 @@
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para modo oscuro */
+body.dark-mode {
+    background-color: #222438;
+    color: white;
+}
+body.dark-mode a{
+    color: white !important;
+}
+body.dark-mode .header-nav{
+    background-color: #202335;
+    box-shadow: none;
+}
+
+/* Puedes agregar más estilos específicos para el modo oscuro */
+.dark-mode .some-element {
+    background-color: gray;
+}
+.dark-mode .header-nav .offcanvas{
+    background-color: #202335 !important;
+}
+.dark-mode .cookie-popup, .dark-mode .card{
+    background-color: #202335;
+}

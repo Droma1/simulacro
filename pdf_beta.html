@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generar PDF con jsPDF</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.0/html2canvas.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ejemplo de Generación de PDF con jsPDF</h1>
+        <p>Este es un ejemplo de cómo generar un PDF con jsPDF en formato A4.</p>
+        <p>Puedes incluir cualquier contenido aquí que desees en tu PDF.</p>
+        <button onclick="generarPDF()">Generar PDF</button>
+    </div>
+
+    <script>
+        function generarPDF() {
+            const { jsPDF } = window.jspdf;
+
+            // Crear un nuevo documento PDF con tamaño A4
+            let pdf = new jsPDF({
+                orientation: 'portrait',
+                unit: 'mm',
+                format: 'a4'
+            });
+
+            // Obtener el contenedor con el contenido que queremos convertir a PDF
+            const element = document.querySelector('.container');
+
+            // Opciones para el método html2canvas
+            let options = {
+                scale: 1, // Escala del PDF (1 = tamaño original)
+                useCORS: true // Habilitar CORS para imágenes externas
+            };
+
+            // Convertir el contenedor a una imagen utilizando html2canvas
+            html2canvas(element, options).then((canvas) => {
+                const imgData = canvas.toDataURL('image/png');
+                const imgWidth = 210; // Ancho de la imagen en mm (A4)
+                const pageHeight = 297; // Alto de la página en mm (A4)
+                const imgHeight = canvas.height * imgWidth / canvas.width;
+                let heightLeft = imgHeight;
+                let position = 0;
+
+                // Agregar la imagen al PDF
+                pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                heightLeft -= pageHeight;
+
+                // Mientras haya altura restante en la página, agregamos nuevas páginas
+                while (heightLeft >= 0) {
+                    position = heightLeft - imgHeight;
+                    pdf.addPage();
+                    pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                    heightLeft -= pageHeight;
+                }
+
+                // Guardar el PDF con el nombre "ejemplo.pdf"
+                pdf.save("ejemplo.pdf");
+            });
+        }
+    </script>
+</body>
+</html>
