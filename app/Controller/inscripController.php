@@ -120,7 +120,7 @@ class inscripcionController extends inscripcionModel{
                         <img src="'.URL.'public/img/logo_un.jpg" class="marca_de_agua" alt="">
                         <strong><CENTER><h5>UNIVERSIDAD NACIONAL AMAZÓNICA DE MADRE DE DIOS</h5></CENTER></strong>
                         <center><h5>DIRECCIÓN DE ADMISIÓN</h5></center>
-                        <center>***************************************************************************************************</center>
+                        <center>************************************************************************************************</center>
                         <div class="row" style="float:right;">
                             '.date("g:i a, d-m-Y").'
                             

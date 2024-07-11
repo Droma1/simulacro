@@ -4,12 +4,12 @@
     <br>
 <div class="row">
     
-    <div class="col-md-6">
+    <div class="col-md-6 col-xs-12">
         <div class="card">
             
             <div class="card-body">
                 <br>
-                <h4>Formulario de Inscripción Simulacro 2024-II</h4>
+                <center><h1>Formulario de Inscripción Simulacro 2024-II</h1></center>
                 <br>
                 <form action="registro" method="post">
                 

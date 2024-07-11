@@ -57,7 +57,7 @@ if($peticionAjax){
             return $sql;
         }
         protected function v_exist($dato){
-            $sql = mainClass::consulta_simple("select * from postulante where documento = ".$dato.";");
+            $sql = mainClass::consulta_simple("select * from postulante where documento = '".$dato."';");
             if($sql->RowCount()>0){
                 $respuesta = 'existe';
             }else{
@@ -66,7 +66,7 @@ if($peticionAjax){
             return $respuesta;
         }
         protected function registro_consulta($documento){
-            $sql = mainClass::consulta_simple("select * from listar_registro where documento = ".$documento.";");
+            $sql = mainClass::consulta_simple("select * from listar_registro where documento = '".$documento."';");
 
             return $sql;
         }

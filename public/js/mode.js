@@ -132,7 +132,7 @@ $(document).ready(function(){
 
   $('#consultar_registro').click(function(){
     var doc = $('#documento_c').val();
-    console.log(doc+"-"+doc.length);
+    //console.log(doc+"-"+doc.length);
     if(doc.length > 0 ){
       constancia_consulta();
     }else{

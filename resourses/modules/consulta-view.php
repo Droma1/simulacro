@@ -19,7 +19,7 @@
                             <div class="mb-3">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="consultar_registro">Consultar</span>
-                                    <input type="number" class="form-control" placeholder="DNI / CARNET DE EXTRANJERÍA" id="documento_c" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" placeholder="DNI / CARNET DE EXTRANJERÍA" id="documento_c" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                             </div>
                         </div>
