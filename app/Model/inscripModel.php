@@ -10,7 +10,7 @@ if($peticionAjax){
 }
     class inscripcionModel extends mainClass{
         protected function registro($dato, $flag, $tema){
-            $fecha = date("F j, Y, g:i a");
+            $fecha = date("Y-m-d H:i:s");
             if($flag == 1){
                 $sql = mainClass::conectar()->prepare("call inscripcion(:Dato1, :Dato2, :Dato3, :Dato4, :Dato5, :Dato6, :Dato7, :Dato8, :Dato9, :Dato10, :Dato11, :Dato12, :Dato13, :Dato14);");
                 $sql->bindParam(":Dato1", $dato['Nombre']);
