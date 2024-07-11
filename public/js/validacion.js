@@ -38,11 +38,12 @@ function validar_inicio(){
       flag ++;
     }
   //console.log(doc);
-    if((doc.length === 8 && doc_tipo === 'carnet') || (doc.length === 9 && doc_tipo === 'dni') || !doc || (doc_tipo == 0 || doc_tipo =='' || doc_tipo == null)){
-      $('#documento').addClass('is-invalid');
-    }else{
+    if((doc.length == 8 && doc_tipo == 'dni') || (doc.length == 9 && doc_tipo == 'carnet')){
+      
       $('#documento').removeClass('is-invalid').addClass('is-valid');
       flag ++;
+    }else{
+      $('#documento').addClass('is-invalid');
     }
   
     if(carrera === 0 || carrera == ' ' || carrera == null){
@@ -219,21 +220,20 @@ function validar_inicio(){
       $('#Provincia').removeClass('is-invalid').addClass('is-valid');
       flag ++;
     }
-
-    if((lugar_ie === '' || lugar_ie === ' ' || lugar_ie == null) && (region !== 'Otro')){
-        $('#Lugar_ie').addClass('is-invalid');
+    if(region === 'Otro' && (lugar_ie ==='' || lugar_ie == null)){
+      $('#Lugar_ie').addClass('is-invalid');
+        
+      }else{        
         $('#Lugar_ie').removeClass('is-invalid').addClass('is-valid');
         flag ++;
-      }else{
-        $('#Lugar_ie').addClass('is-invalid');
       }
 
-    if((nombre_ie === '' || nombre_ie === ' ') && (region !== 'Otro')){
+    if(region === 'Otro' && (nombre_ie ==='' || nombre_ie == null)){
+        $('#Nombre_ie').addClass('is-invalid');
         
+    }else{
         $('#Nombre_ie').removeClass('is-invalid').addClass('is-valid');
         flag ++;
-    }else{
-        $('#Nombre_ie').addClass('is-invalid');
     }
 
     if((ie === '' || ie === ' ' || ie == null) && (region === 'Madre de Dios')){

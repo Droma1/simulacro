@@ -1,7 +1,7 @@
 <section class="content header-nav">
 <div class="container">
     <div class="nav_logo">
-    <a href="inicio" class="navbar-brand">ADMISION</a>
+    <a href="inicio" class="navbar-brand text_ad"> <img class="icon_logo" src="<?php echo URL; ?>public/img/logo_un.jpg" alt=""> <span>ADMISIÓN UNAMAD</span></a>
     </div>
 
     <div class="nav_link">

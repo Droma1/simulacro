@@ -1,14 +1,15 @@
+<div class="banner">
 <section class="container">
     <br>
     <br>
 <div class="row">
-    <div class="col-md-6"></div>
+    
     <div class="col-md-6">
         <div class="card">
             
             <div class="card-body">
                 <br>
-                <h5>Formulario de Inscripción Simulacro 2024-II</h5>
+                <h4>Formulario de Inscripción Simulacro 2024-II</h4>
                 <br>
                 <form action="registro" method="post">
                 
@@ -71,8 +72,8 @@
                     <label for="nivel">Nivel...</label>
                 </div>
                 <div class="form mb-3">
-                    <span class="btn btn-success" id="registrar" >Continuar</span>
-                    <a href="consulta" class="btn btn-warning">Consultar inscripción</a>
+                    <a href="consulta" class="btn btn-warning">Consultar inscripción <span class="icon-search"></span></a>
+                    <span class="btn btn-success" id="registrar" >Continuar <span class="icon-right"></span></span>                    
                     <button style="display:none;" type="submit" class="btn btn-success" id="continuar">Continuar</button>
                 </div>
                 <div class="form mb-3">
@@ -82,7 +83,9 @@
             </div>
         </div>
     </div>
+    <div class="col-md-6"></div>
 </div>
     <br>
     <br>
 </section>
+</div>

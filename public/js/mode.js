@@ -1,5 +1,9 @@
 //import './validacion.js';
+window.addEventListener('load', function() {
 
+  $(".loader").fadeOut("slow");
+
+});
 $(document).ready(function(){
   // Detectar la preferencia del usuario
   const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -76,9 +80,17 @@ $(document).ready(function(){
             $('#Ie_seleccion').val("0");  // Reset to default
         $('#Lugar_ie').prop('disabled', false);
         $('#Nombre_ie').prop('disabled', false);
+        $('.provin').css('display','none');
+        $('.ie_edu').css('display','none');
+        $('.lugar').css('display','block');
+        $('.nombre_i').css('display','block');
         $('#Ie_seleccion').prop('disabled', true);
     } else {
         provincia.prop('disabled', false);
+        $('.provin').css('display','block');
+        $('.ie_edu').css('display','block');
+        $('.lugar').css('display','none');
+        $('.nombre_i').css('display','none');
         $('#Lugar_ie').prop('disabled', true);
         $('#Lugar_ie').val("");
         $('#Nombre_ie').prop('disabled', true);

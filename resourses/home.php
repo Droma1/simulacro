@@ -11,7 +11,11 @@
     <?php include "./resourses/components/scripts.php"; ?>
 </head>
 <body>
-
+    <div class="loader">
+        <div class="align-self-center spinner-border text_spiner" role="status">
+        </div>
+        <span class="align-self-center visually-show">  Cargando...</span>
+    </div>
 <?php
 $peticionAjax = false;
 //echo "peticion"; var_dump($peticionAjax);
@@ -45,5 +49,6 @@ $peticionAjax = false;
     };
     include "./resourses/components/user/footer.php";
 ?>
+
 </body>
 </html>

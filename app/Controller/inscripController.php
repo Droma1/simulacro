@@ -102,6 +102,12 @@ class inscripcionController extends inscripcionModel{
             $r_consulta = (array) $consulta->fetch();
             $respuesta = '
                 <!--cuerpo de pdf-->
+                <div class="row notify justify-content-center">
+                    <div class="col-md-6">
+                        <h4><strong>¡IMPORTANTE!</strong> Presentar la siguiente constancia a la oficina de Admisión, Bajo responsabilidad del Postulante <strong><span class="icon-down"></span><span class="icon-down"></span><span class="icon-down"></span></strong></h4>
+                    </div>
+                </div>
+                <br>
                     <div class="container">
                         <div class="row">
                             <div class="col">

@@ -1,6 +1,22 @@
 @import url('fonts.css');
 @import url('dark-mode.css');
-
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-size: 10%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255,255,255,.2);
+    display: flex;
+    justify-content: center;
+}
+.loader .text_spiner{
+    margin: 10px;
+    color: #FF4A57;
+}
 .no_found{
     position: relative;
     height: calc(100vh - 60px);
@@ -130,6 +146,8 @@
     padding: 80px;
     padding-top: 20px;
     padding-bottom: 5px;
+    background-color: #fff !important;
+    color: #000 !important;
 }
 
 .pdf_cuerpo h1{
@@ -157,13 +175,31 @@
 }
 .marca_de_agua{
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     opacity: 0.2;
     width: 650px;
     transform: translate(-10px, 220px);
 }
 .pdf_cuerpo hr{
     margin: 5px;
+}
+.notify{
+    padding: 20px 0px;
+    background-color: #FF4A57;
+    color: #fff;
+    text-align: center;
+}
+.banner{
+    /* Definir el fondo con un patrón de puntos degradado */
+    background-image: url('../img/fd.jpeg');
+    background-size: cover;
+}
+.icon_logo{
+    height: 35px;
+}
+.text_ad>span{
+    position: relative;
+    top: 3px;
 }
 @media (max-width: 768px) {
     .body_container{

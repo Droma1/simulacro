@@ -110,7 +110,7 @@ require_once "app/Controller/inscripController.php";
                                         <label for="Grado">Región...</label>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 provin" style="display:none;">
                                     <div class="form-floating mb-3">
                                         <select class="form-select" id="Provincia" name="Provincia" aria-label="Provincia" disabled>
                                             <option value="0" SELECTED disabled="">Elije una opción...</option>
@@ -123,19 +123,19 @@ require_once "app/Controller/inscripController.php";
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-4 lugar" style="display:none;">
                                     <div class="form-floating mb-3">
                                         <input type="text" class="form-control" id="Lugar_ie" name="Lugar_ie" placeholder="Lugar de la instituión eduativa" disabled>
                                         <label for="Lugar_ie">Lugar de la Institución Educativa</label>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 nombre_i" style="display:none;">
                                     <div class="form-floating mb-3">
                                         <input type="text" class="form-control" id="Nombre_ie" name="Nombre_ie" placeholder="Nombre de la instituión eduativa" disabled>
                                         <label for="Nombre_ie">Nombre de la Institución Educativa</label>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 ie_edu" style="display:none;">
                                     <div class="form-floating mb-3">
                                         <select class="form-select" id="Ie_seleccion" name="Ie_seleccion" aria-label="Seleccione su institución educativa" disabled>
                                             <option value="0" SELECTED disabled="">Elije una opción...</option>

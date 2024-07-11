@@ -27,3 +27,13 @@ body.dark-mode .header-nav{
 .dark-mode .cookie-popup, .dark-mode .card{
     background-color: #202335;
 }
+.dark-mode .card .card-body input{
+    background-color: #333750;
+    border: 1px solid #FF4A57;
+    color: #fff;
+}
+.dark-mode .card .card-body select{
+    background-color: #333750;
+    border: 1px solid #FF4A57;
+    color: #fff;
+}
