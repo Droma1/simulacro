@@ -78,9 +78,11 @@ function actualizar_registro(){
 }
 
 function registro_consulta(dato){
+
+    console.log(dato);
     var datos = new FormData();
     datos.append('documento',$('#documento_c').val());
-    datos.append('tipo',dato);
+    datos.append('tk',dato);
     var msjError="<script>alert('Ocurrió un error inesperado'+'Por favor recargue la página','error');</script>";
 
     var url_ = "./app/Ajax/actualizarAjax.php";

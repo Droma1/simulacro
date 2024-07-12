@@ -150,12 +150,12 @@ $(document).ready(function(){
 
   $('.buscar_registro').click(function(){
     //console.log("buscando..");
-    registro_consulta(0);
+    registro_consulta();
   });
 
   $('.buscar_registro_ck').click(function(){
-    console.log("buscando..");
-    registro_consulta(1);
+    //console.log("buscando..");
+    registro_consulta("1");
   });
 
 });
