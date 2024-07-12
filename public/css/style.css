@@ -201,6 +201,9 @@
     position: relative;
     top: 3px;
 }
+#basic-addon1{
+    cursor: pointer;
+}
 @media (max-width: 768px) {
     .text_ad>span{
         position: relative;

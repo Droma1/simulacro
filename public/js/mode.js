@@ -148,6 +148,16 @@ $(document).ready(function(){
     exportarTablaAExcel('tabla_excel', 'registro_simulacro.xlsx');
   });
 
+  $('.buscar_registro').click(function(){
+    //console.log("buscando..");
+    registro_consulta(0);
+  });
+
+  $('.buscar_registro_ck').click(function(){
+    console.log("buscando..");
+    registro_consulta(1);
+  });
+
 });
 
 

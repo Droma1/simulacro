@@ -9,6 +9,23 @@ if($peticionAjax){
 
 }
     class inscripcionModel extends mainClass{
+
+        protected function actualizar_registro_model($dato){
+            //var_dump($dato);
+            $sql = mainClass::conectar()->prepare("call actualizar_registro(:Dato1, :Dato2, :Dato3, :Dato4, :Dato5, :Dato6, :Dato7, :Dato8);");
+                $sql->bindParam(":Dato1", $dato['nombre']);
+                $sql->bindParam(":Dato2", $dato['Apellido_p']);
+                $sql->bindParam(":Dato3", $dato['Apellido_m']);
+                $sql->bindParam(":Dato4", $dato['Documento']);
+                $sql->bindParam(":Dato5", $dato['Carrera']);
+                $sql->bindParam(":Dato6", $dato['Cel']);
+                $sql->bindParam(":Dato7", $dato['codigo']);
+                $sql->bindParam(":Dato8", $dato['tema']);
+                $sql->execute();
+                //var_dump($sql->fetch());
+                return $sql;
+        }
+
         protected function registro($dato, $flag, $tema){
             $fecha = date("Y-m-d H:i:s");
             if($flag == 1){
@@ -71,7 +88,11 @@ if($peticionAjax){
             return $sql;
         }
         protected function listado_registro(){
-            $sql = mainClass::consulta_simple("select * from listar_registro;");
+            $sql = mainClass::consulta_simple("select * from listar_registro_general;");
+            return $sql;
+        }
+        protected function busqueda_postulante_model($documento){
+            $sql = mainClass::consulta_simple("select * from listar_registro_general where cod_postulante = '".$documento."';");
             return $sql;
         }
     }

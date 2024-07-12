@@ -9,7 +9,9 @@
             <li class="nav-item theme-mode-icons"> <span class="icon-theme" id="toggle-dark-mode"></span></li>
             <div class="links">
             <li class="nav-item"><a class="nav-link" href="inicio">inicio</a></li>          
-            <li class="nav-item"><a class="nav-link" href="">Acceder</a></li>
+            <li class="nav-item"><a class="nav-link" href="listado">Listar</a></li>
+            <li class="nav-item"><a class="nav-link" href="actualizar">Actualizar</a></li>
+            <li class="nav-item"><a class="nav-link" href="recepcionar">Recepcionar</a></li>
             </div>
             <div class="menu-movil">
                 <span class="icon-menu" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></span>
@@ -26,7 +28,9 @@
     <div class="nav_link">
     <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="inicio">inicio</a></li>           
-        <li class="nav-item"><a class="nav-link" href="">Acceder</a></li>
+        <li class="nav-item"><a class="nav-link" href="listado">Listar</a></li>
+        <li class="nav-item"><a class="nav-link" href="actualizar">Actualizar</a></li>
+        <li class="nav-item"><a class="nav-link" href="recepcionar">Recepcionar</a></li>
     </ul>
     </div>
   </div>

@@ -3,7 +3,7 @@
 
     class Route_controller extends viewProcess{
 
-        public static $dir_user = ["inicio", "home", "proyectos", "registro", "consulta","listado"];
+        public static $dir_user = ["inicio", "home", "registro", "consulta","listado", "actualizar", "recepcionar"];
         public static $dir_admin = ["admin"];
 
         public function index_(){

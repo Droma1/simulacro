@@ -15,6 +15,7 @@
 <script src="<?php echo URL ?>public/js/constancia.js"></script>
 <script src="<?php echo URL ?>public/js/generar_constancia.js"></script>
 <script src="<?php echo URL ?>public/js/validacion.js"></script>
+<script src="<?php echo URL ?>public/js/actualizar_registro.js"></script>
 <script src="<?php echo URL ?>public/js/generate_excel.js"></script>
 <script src="<?php echo URL ?>public/js/mode.js"></script>
 <link rel="stylesheet" href="<?php echo URL ?>public/css/style.css">
