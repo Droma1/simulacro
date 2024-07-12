@@ -70,5 +70,9 @@ if($peticionAjax){
 
             return $sql;
         }
+        protected function listado_registro(){
+            $sql = mainClass::consulta_simple("select * from listar_registro;");
+            return $sql;
+        }
     }
 ?>

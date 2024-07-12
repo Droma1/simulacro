@@ -37,3 +37,6 @@ body.dark-mode .header-nav{
     border: 1px solid #FF4A57;
     color: #fff;
 }
+.dark-mode .table{
+    color: #fff;
+}

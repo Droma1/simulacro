@@ -144,7 +144,9 @@ $(document).ready(function(){
     }
   });
 
-  
+  $('#excel_g').click(function(){
+    exportarTablaAExcel('tabla_excel', 'registro_simulacro.xlsx');
+  });
 
 });
 

@@ -5,11 +5,16 @@ if($peticionAjax){
 
 }else{
 
-    require_once "././app/Model/inscripModel.php";
+    require_once "./app/Model/inscripModel.php";
 
 }
 
 class inscripcionController extends inscripcionModel{
+
+    public function listar_registro(){
+        $consulta = inscripcionModel::listado_registro();
+        return $consulta;
+    }
 
     public function val_reg($dato){
         $tema_p = ["INGENIERÍA AGROINDUSTRIAL","INGENIERÍA DE SISTEMAS E INFORMÁTICA", "INGENIERÍA FORESTAL Y MEDIO AMBIENTE"];
