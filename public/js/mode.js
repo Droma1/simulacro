@@ -150,7 +150,7 @@ $(document).ready(function(){
 
   $('.buscar_registro').click(function(){
     //console.log("buscando..");
-    registro_consulta();
+    registro_consulta(null);
   });
 
   $('.buscar_registro_ck').click(function(){

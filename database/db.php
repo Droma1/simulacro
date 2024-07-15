@@ -1,5 +1,5 @@
 <?php
-/*
+
 	const SERVER = "localhost";
 
 	const DB = "simulacro";
@@ -11,7 +11,7 @@
 
 
 	const SGBD = "mysql:host=".SERVER.";dbname=".DB."; charset=utf8";
-*/
+/*
 	const SERVER = "201.148.106.60";
 
 	const DB = "unamaded_simulacro";
@@ -22,9 +22,8 @@
 
 
 
-	//const SGBD = "mysql:host=".SERVER.";dbname=".DB;
 	const SGBD = "mysql:host=".SERVER.";dbname=".DB."; charset=utf8";
-
+*/
 /*type BD = utf8_spanish_ci*/ 
 
 ?>
