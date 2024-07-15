@@ -204,6 +204,9 @@
 #basic-addon1{
     cursor: pointer;
 }
+#tabla_excel{
+    white-space: nowrap;
+}
 @media (max-width: 768px) {
     .text_ad>span{
         position: relative;

@@ -73,7 +73,7 @@ $(document).ready(function(){
     var regionSeleccionada = $(this).val();
     var provincia = $('#Provincia');
     
-    if (regionSeleccionada === 'Otro') {
+    if (regionSeleccionada !== 'Madre de Dios' && regionSeleccionada !==0) {
         provincia.prop('disabled', true);
         provincia.val("0");  // Reset to default
         $('#Ie_seleccion').prop('disabled', true);
@@ -156,6 +156,10 @@ $(document).ready(function(){
   $('.buscar_registro_ck').click(function(){
     //console.log("buscando..");
     registro_consulta("1");
+  });
+  $('#recepcionados').click(function(){
+    console.log("listando...");
+    listar_aceptados();
   });
 
 });

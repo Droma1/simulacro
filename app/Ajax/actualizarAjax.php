@@ -9,6 +9,8 @@
             echo $registro->actualizar_registro();
     }elseif(isset($_POST['tk'])){
         echo $registro->registro_check();
+    }elseif(isset($_POST['ok'])){
+        echo $registro->recepcion_controller();
     }else{
         
         echo $registro->busqueda_postulante($_POST['documento']);

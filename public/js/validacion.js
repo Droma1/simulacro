@@ -220,7 +220,7 @@ function validar_inicio(){
       $('#Provincia').removeClass('is-invalid').addClass('is-valid');
       flag ++;
     }
-    if(region === 'Otro' && (lugar_ie ==='' || lugar_ie == null)){
+    if((region !== 'Madre de Dios' && region !== 0) && (lugar_ie ==='' || lugar_ie == null)){
       $('#Lugar_ie').addClass('is-invalid');
         
       }else{        
@@ -228,7 +228,7 @@ function validar_inicio(){
         flag ++;
       }
 
-    if(region === 'Otro' && (nombre_ie ==='' || nombre_ie == null)){
+    if((region !== 'Madre de Dios' && region !== 0) && (nombre_ie ==='' || nombre_ie == null)){
         $('#Nombre_ie').addClass('is-invalid');
         
     }else{

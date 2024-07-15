@@ -25,6 +25,19 @@ if($peticionAjax){
                 //var_dump($sql->fetch());
                 return $sql;
         }
+        protected function reporte_lista_model(){
+            $sql = mainclass::consulta_simple("select * from list_registry_accepted order by date_status desc;");
+            return $sql;
+        }
+        protected function recepcion_model($codigo){
+            $fecha = date("Y-m-d H:i:s");
+            $sql = mainClass::conectar()->prepare("call registrar_recepcion(:Dato1, :Dato2)");
+            $sql->bindParam(":Dato1", $codigo);
+            $sql->bindParam(":Dato2", $fecha);
+            $sql->execute();
+
+            return $sql;
+        }
 
         protected function registro($dato, $flag, $tema){
             $fecha = date("Y-m-d H:i:s");

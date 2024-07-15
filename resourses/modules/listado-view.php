@@ -3,17 +3,39 @@
     require_once "./app/Controller/inscripController.php";
     $listas = new inscripcionController();
     $lista = $listas->listar_registro();
+    $contador = $listas->contador_tema('pendientes');
+    $total = 0;
     $flag = 1;
 ?>
 
 <div class="container-fluid">
     <div class="content">
         <br>
+        <div class="row justify-content-center">
+        <?php
+            while ($tema = $contador->fetch()) {
+                ?>
+                <div class="col-md-4">
+                    <div class="alert alert-primary" role="alert">
+                        <?php echo "Tema: ".$tema[1]." : ".$tema[0]; ?>
+                    </div>
+                    
+                </div>
+                <?php
+                $total = $total + $tema[0];
+                }
+            ?>
+        </div>
+        <div class="row">
+            <div class="col text-end">
+                <h4><?php echo "Total de inscritos:".$total; ?></h4>
+            </div>
+        </div>
         <div class="row">
             <div class="col">
                 <button type="submit" class="btn btn-success" id="excel_g">Generar Excel</button>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-12" style="position:relative;overflow-x:scroll;">
                 <table class="table table-sm table-hover" id="tabla_excel">
                     <thead>
                         <tr>

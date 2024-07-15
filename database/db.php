@@ -1,5 +1,5 @@
 <?php
-
+/**/ 
 	const SERVER = "localhost";
 
 	const DB = "simulacro";
@@ -23,7 +23,7 @@
 
 
 	const SGBD = "mysql:host=".SERVER.";dbname=".DB."; charset=utf8";
-*/
+
 /*type BD = utf8_spanish_ci*/ 
 
 ?>

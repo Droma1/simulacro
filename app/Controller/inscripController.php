@@ -15,6 +15,130 @@ class inscripcionController extends inscripcionModel{
         $consulta = inscripcionModel::listado_registro();
         return $consulta;
     }
+    public function contador_tema($tipo){
+        switch ($tipo) {
+            case 'recibidos':
+                $sql = "select count(tema), tema from list_registry_accepted group by tema";
+                break;
+            
+            default:
+                $sql = "select count(tema), tema from listar_registro_general group by tema";
+                break;
+        }
+        $consulta = mainClass::consulta_simple($sql);
+        return $consulta;
+    }
+    public function reporte_lista(){
+        $consulta = inscripcionModel::reporte_lista_model();
+        if($consulta->rowCount() > 0){
+            $contador = 1;
+            $respuesta = '
+            <div class="row">
+                <div class="col">
+                    <button type="submit" class="btn btn-success" id="excel_g">Generar Excel <span class="icon-file-excel"></span></button>
+                </div>
+                
+                <div class="col">
+                <br>
+                    <div class="card">
+                        <div class="card-body" style="position:relative; overflow-x:scroll;">
+                            <table class="table table-sm" id="tabla_excel">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nombres</th>
+                                        <th scope="col">Apellido Paterno</th>
+                                        <th scope="col">Apellido Materno</th>
+                                        <th scope="col">Documento</th>
+                                        <th scope="col">Celular</th>
+                                        <th scope="col">Código Postulante</th>
+                                        <th scope="col">Estado</th>
+                                        <th scope="col">Fecha de Recepción</th>
+                                        <th scope="col">Carrera</th>
+                                        <th scope="col">Tema</th>
+                                        <th scope="col">Nivel</th>
+                                        <th scope="col">Grado</th>
+                                        <th scope="col">Region</th>
+                                        <th scope="col">Provincia</th>
+                                        <th scope="col">Colegio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ';
+                                    while($dato = $consulta->fetch()){                                    
+                                        $respuesta = $respuesta . '<tr><th scope="row">'.$contador.'</th>
+                                        <td>'.$dato['nombre'].'</td>
+                                        <td>'.$dato['apellido_p'].'</td>
+                                        <td>'.$dato['apellido_m'].'</td>
+                                        <td>'.$dato['documento'].'</td>
+                                        <td>'.$dato['phone'].'</td>
+                                        <td>'.$dato['cod_postulante'].'</td>
+                                        <td><span class="badge bg-success">'.$dato['status_'].'</span></td>
+                                        <td>'.$dato['date_status'].'</td>
+                                        <td>'.$dato['n_carrera'].'</td>
+                                        <td>'.$dato['tema'].'</td>
+                                        <td>'.$dato['nivel'].'</td>
+                                        <td>'.$dato['n_grado'].'</td>
+                                        <td>'.$dato['n_region'].'</td>
+                                        <td>'.$dato['n_provincia'].'</td>
+                                        <td>'.$dato['n_ie'].'</td></tr>';
+                                        $contador = $contador + 1;
+                                }
+                                $respuesta = $respuesta . '
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $("#excel_g").click(function(){
+                    exportarTablaAExcel("tabla_excel", "registro_simulacro_aceptados.xlsx");
+                });
+            </script>
+        ';
+        }else{
+            $respuesta = 'no hay registros';
+        }
+        return $respuesta;
+    }
+    public function recepcion_controller(){
+        $documento = mainClass::clear_string($_POST['documento']);
+        $validar = mainClass::consulta_simple("select * from list_registry_accepted where cod_postulante = '".$documento."';");
+        if($validar->rowCount() > 0){
+            $alerta = [
+                "Alerta" => "msg",
+                "icon" => "warning",
+                "title" => "Advertencia.",
+                "msg" => "El registro ya se encuentra recepcionado."
+            ];
+        }else{
+            $consulta = inscripcionModel::recepcion_model($documento);
+            if($consulta->rowCount() > 0){
+                $alerta = [
+                    "Alerta" => "direccionar",
+
+                    "icon" => "success",
+
+                    "title" => "Recepcion exitosa",
+
+                    "msg" => "se recepcionó registros del postulante.",
+
+                    "direccion" => "recepcionar"
+                ];
+            }else{
+                $alerta = [
+                    "Alerta" => "msg",
+                    "icon" => "warning",
+                    "title" => "Advertencia.",
+                    "msg" => "No se pudo completar la recepcion."
+                ];
+            }
+        }
+        
+        return mainClass::alerts($alerta);
+    }
     public function registro_check(){
         $documento = mainClass::clear_string($_POST['documento']);
         $consulta = inscripcionModel::busqueda_postulante_model($documento);
@@ -69,7 +193,7 @@ class inscripcionController extends inscripcionModel{
                                         <div class="row">
                                             <div class="col">
                                                 <div class="mb-3">
-                                                    <buttom class="btn btn-warning" id="Actualiza">Recepcionar</buttom>
+                                                    <buttom class="btn btn-warning validar">Recepcionar</buttom>
                                                 </div>
                                             </div>
                                         </div>
@@ -80,9 +204,8 @@ class inscripcionController extends inscripcionModel{
                         </div>
 
                         <script>
-                            $("#Actualizar").click(function(){
-                                //console.log("generando");
-                                actualizar_registro();
+                            $(".validar").click(function(){
+                                registro_consulta("2");
                             });
                         </script>
             ';
