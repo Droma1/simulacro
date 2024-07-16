@@ -235,8 +235,7 @@ function validar_inicio(){
         $('#Nombre_ie').removeClass('is-invalid').addClass('is-valid');
         flag ++;
     }
-
-    if((ie === '' || ie === ' ' || ie == null) && (region === 'Madre de Dios')){
+    if((ie === null || ie === "0") && region === 'Madre de Dios'){
         $('#Ie_seleccion').addClass('is-invalid');
     }else{
         $('#Ie_seleccion').removeClass('is-invalid').addClass('is-valid');
