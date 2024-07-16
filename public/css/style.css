@@ -191,7 +191,7 @@
 }
 .banner{
     /* Definir el fondo con un patrón de puntos degradado */
-    background-image: url('../img/fd.jpeg');
+    background-image: url('../img/banner3.jpg');
     background-size: cover;
 }
 .icon_logo{
