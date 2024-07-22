@@ -531,7 +531,7 @@ class inscripcionController extends inscripcionModel{
                         <strong><i>CARRERA PROFESIONAL:</i></strong><br>
                         <i>'.$r_consulta['n_carrera'].'</i>
                         <hr>
-                        <center><strong><h1>TEMA: P</h1></strong></center>
+                        <center><strong><h1>TEMA: '.$r_consulta['tema'].'</h1></strong></center>
                         <strong><p>RECOMENDACIONES IMPORTANTES:</p></strong>
                         <p><strong>SEÑOR(ITA) POSTULANTE,</strong> se le recuerda que <strong>ESTÁ TERMINANTEMENTE PROHIBIDO</strong> Traer artículos como:</p>
                         <p>Celulares, calculadoras, ipad, teléfonos de pulseras, reproductores de música, radio, audífonos, auriculares, 

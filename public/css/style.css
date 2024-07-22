@@ -207,7 +207,60 @@
 #tabla_excel{
     white-space: nowrap;
 }
+.login{
+    position: relative;
+    height: calc(100vh - 89px);
+}
+.login .row{
+    transform: translateY(50%);
+}
+.login .row .card .card-body button{
+    width: 100%;
+}
+.banner .row .card, .login .row .card{
+    backdrop-filter: blur(5px);
+    background-color: rgba(255,255,255,.7);
+}
+.time{
+    position: relative;
+    transform: translateY(0%);
+    text-align: center;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255,255,255,.7);
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+.time h3{
+    padding: 10px;
+}
+.numero_time{
+    font-size: 70px;
+    font-family: "Saira-Regular";
+}
+.box_time{
+    position: relative;
+    display: inline-grid;
+    padding: 10px;
+    color: #000;
+    overflow: hidden;
+}
+.box_time p{
+    margin: 0px;
+}
 @media (max-width: 768px) {
+    .time{
+        transform: translateY(0%);
+        margin-bottom: 10px;
+    }
+    .box_time{
+        padding: 0px;
+    }
+    .box_time h4{
+        font-size: 15px;
+    }
+    .numero_time{
+        font-size: 40px;
+    }
     .text_ad>span{
         position: relative;
         top: 3px;

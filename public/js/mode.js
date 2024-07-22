@@ -4,6 +4,37 @@ window.addEventListener('load', function() {
   $(".loader").fadeOut("slow");
 
 });
+// Establecer la fecha límite para el conteo regresivo
+var countDownDate = new Date("Aug 03, 2024 08:00:00").getTime();
+
+// Actualizar el conteo cada 1 segundo
+var countdownfunction = setInterval(function() {
+
+    // Obtener la fecha y hora actual
+    var now = new Date().getTime();
+    
+    // Encontrar la distancia entre ahora y la fecha límite
+    var distance = countDownDate - now;
+    
+    // Calcular el tiempo para días, horas, minutos y segundos
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Mostrar el resultado en el elemento con id="countdown"
+    $('.time').css("display","block");
+    $('.dias').html(days);
+    $('.horas').html(hours);
+    $('.minutos').html(minutes);
+    $('.segundos').html(seconds);
+    // Si el conteo terminó, escribir algún texto
+    if (distance < 0) {
+        clearInterval(countdownfunction);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+    }
+}, 1000);
+
 $(document).ready(function(){
   // Detectar la preferencia del usuario
   const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;

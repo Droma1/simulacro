@@ -1,3 +1,12 @@
+<!--<section class="content time">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center" style="overflow:hidden;">
+                <h3>¡¡ Simulacro de Examen Ordinario: <label id="countdown"></label> !!</h3>
+            </div>
+        </div>
+    </div>-->
+</section>
 <div class="banner">
 <section class="container">
     <br>
@@ -83,9 +92,42 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6"></div>
+<br>
+    <div class="col-md-6">
+        <div class="time" style="display:none">
+            <br>
+            <h3>¡¡ Tiempo restante para el Simulacro de Examen Ordinario !!</h3>
+                <div class="box_time">
+                    <p class="dias numero_time"></p>
+                    <h4>Días</h4>
+                </div>
+                <div class="box_time">
+                    <h1>-</h1>
+                </div>
+                <div class="box_time">
+                    <p class="horas numero_time"></p>
+                    <h4>horas</h4>
+                </div>
+                <div class="box_time">
+                    <h1>:</h1>
+                </div>
+                <div class="box_time">
+                    <p class="minutos numero_time"></p>
+                    <h4>Minutos</h4>
+                </div>
+                <div class="box_time">
+                    <h1>:</h1>
+                </div>
+                <div class="box_time">
+                    <p class="segundos numero_time"></p>
+                    <h4>Segundos</h4>
+                </div>
+                <br>
+                
+        </div>
+    </div>
+    <br>
 </div>
-    <br>
-    <br>
+<br>
 </section>
 </div>

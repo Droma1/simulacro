@@ -40,3 +40,14 @@ body.dark-mode .header-nav{
 .dark-mode .table{
     color: #fff;
 }
+.dark-mode .banner .row .card, .dark-mode .login .row .card{
+    backdrop-filter: blur(5px);
+    background-color: rgba(32,35,53,.7);
+}
+.dark-mode .box_time{
+    color: #fff;
+}
+.dark-mode .time{
+    backdrop-filter: blur(5px);
+    background-color: rgba(32,35,53,.7);
+}

@@ -78,7 +78,6 @@ require_once "app/Controller/inscripController.php";
         </div>
     </div>
     <br>
-    <br>
     <?php
         if($datos['Nivel'] === 'SECUNDARIA'){
             ?>
@@ -185,6 +184,7 @@ require_once "app/Controller/inscripController.php";
             <?php
         }
     ?>
+
     <br>
 </section>
 <?php

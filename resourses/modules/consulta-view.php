@@ -6,13 +6,20 @@
                 <div class="card">
                     <div class="card-body">
                     <center>
-                        <h6>Consulta de inscripción</h6>
+                        <h3>Consulta de inscripción</h3>
                         <p>Simulacro de Examen Ordinario 2024-II</p>
                     </center>
-                    <center>
-                        <span>Recuerde que: para completar su inscripción, debe de presentar su constancia de registro a la Oficina de Adminisión de la UNAMAD</span>
-                    </center>
-                    <br>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <h4 style="color:#e9222a;"><strong>¡¡ATENCIÓN!!</strong> </h4> 
+                            <h5>Para finalizar su inscripción tiene que apersonarse a la Oficina de Admisión con:</h5>
+                            <div class="requisitos" style="text-align:left; padding:10px;">
+                                <h5><i>- Copia simple de DNI:</i></h5>
+                                <h5><i>- Ficha de Pre-inscripción</i></h5>
+                                <h5><i>- Comprobante de pago original</i></h5>
+                            </div>
+                        </div>
+                    </div>
                     <br>
                     <div class="row justify-content-center">
                         <div class="col-md-6">

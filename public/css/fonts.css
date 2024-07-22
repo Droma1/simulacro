@@ -4,3 +4,9 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Saira-Regular';
+  src: url('../font/SairaStencilOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
