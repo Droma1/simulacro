@@ -43,6 +43,32 @@ class mainClass{
         return $respuesta;
 
     }
+    protected function conectar_SQL(){
+    
+        try{
+    
+            $link = new PDO(SGBD_SQL,USER_SQL,PASS_SQL);
+    
+        }catch (Exception $e){
+    
+            echo "Error al conectar a la base de datos error: ".$e;
+    
+            //sleep(10000);
+    
+        }
+    
+        return $link;
+    
+    }
+    protected function consulta_simple_SQL($consulta){
+
+        $respuesta = self::conectar_SQL()->prepare($consulta);
+
+        $respuesta->execute();
+
+        return $respuesta;
+
+    }
 
     protected function clear_string($cadena){
 

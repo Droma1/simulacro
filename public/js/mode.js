@@ -5,7 +5,7 @@ window.addEventListener('load', function() {
 
 });
 // Establecer la fecha límite para el conteo regresivo
-var countDownDate = new Date("Aug 03, 2024 08:00:00").getTime();
+var countDownDate = new Date("Aug 02, 2024 12:00:00").getTime();
 
 // Actualizar el conteo cada 1 segundo
 var countdownfunction = setInterval(function() {

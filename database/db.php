@@ -24,6 +24,18 @@
 
 	const SGBD = "mysql:host=".SERVER.";dbname=".DB."; charset=utf8";
 
+	const SERVER_SQL = '192.168.254.153';
+
+	const DB_SQL = 'Admision';
+
+	const USER_SQL = 'userConect';
+
+	const PASS_SQL = 'A$U77/%@@%**21?';
+
+
+
+	const SGBD_SQL = 'sqlsrv:Server='.SERVER_SQL.';Database='.DB_SQL.';ConnectionPooling=0';
+
 /*type BD = utf8_spanish_ci*/ 
 
 ?>

@@ -12,6 +12,7 @@
             <li class="nav-item"><a class="nav-link" href="listado">Listar</a></li>
             <li class="nav-item"><a class="nav-link" href="actualizar">Actualizar</a></li>
             <li class="nav-item"><a class="nav-link" href="recepcionar">Recepcionar</a></li>
+            <li class="nav-item"><a class="nav-link" href="admision">Admision</a></li>
             </div>
             <div class="menu-movil">
                 <span class="icon-menu" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></span>
@@ -31,6 +32,7 @@
         <li class="nav-item"><a class="nav-link" href="listado">Listar</a></li>
         <li class="nav-item"><a class="nav-link" href="actualizar">Actualizar</a></li>
         <li class="nav-item"><a class="nav-link" href="recepcionar">Recepcionar</a></li>
+        <li class="nav-item"><a class="nav-link" href="admision">Admision</a></li>
     </ul>
     </div>
   </div>
