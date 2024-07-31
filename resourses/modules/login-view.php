@@ -21,13 +21,15 @@
                             <a href="">Recuperar Contraseña</a>
                         </div>
                         <div class="mb-3">
-                            <button type="submit" class="btn btn-success">Ingresar</button>
+                            <button type="submit" id="validar" class="btn btn-success">Ingresar</button>
                         </div>
                         <div class="mb-3">
                             <label for="">¿Tienes problemas para ingresar? <a href="">Te podemos ayudar</a></label>
                         </div>
                     </div>
-                </div>
+                    <div class="RespuestaConsulta">
+                    </div>
+                </div>                
             </div>
         </div>
     </div>

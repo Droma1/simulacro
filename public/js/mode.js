@@ -192,6 +192,9 @@ $(document).ready(function(){
     console.log("listando...");
     listar_aceptados();
   });
+  $('#validar').click(function(){
+    process_log();
+  });
 
 });
 

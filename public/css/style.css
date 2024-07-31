@@ -1,6 +1,6 @@
 @import url('fonts.css');
 @import url('dark-mode.css');
-.loader {
+.loader, .loader2 {
     position: fixed;
     left: 0px;
     top: 0px;
@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
 }
-.loader .text_spiner{
+.loader .text_spiner , .loader2 .text_spiner{
     margin: 10px;
     color: #FF4A57;
 }

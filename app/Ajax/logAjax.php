@@ -4,7 +4,8 @@
     
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     require_once "../../app/Controller/logController.php";
-        $registro = new logController();
+        $validate = new logController();
+        echo $validate->validacion_log();
     }else{
         echo ' Advertencia: acceso no permitido, favor verifique sus datos nuevamente.';
     }

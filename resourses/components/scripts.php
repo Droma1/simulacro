@@ -11,6 +11,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
 <script src="<?php echo URL ?>public/js/bootstrap.min.js"></script>
+<script src="<?php echo URL ?>public/js/log_valider.js"></script>
 <script src="<?php echo URL ?>public/js/send_registro.js"></script>
 <script src="<?php echo URL ?>public/js/constancia.js"></script>
 <script src="<?php echo URL ?>public/js/generar_constancia.js"></script>
