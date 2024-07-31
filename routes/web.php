@@ -4,7 +4,7 @@
     class Route_controller extends viewProcess{
 
         public static $dir_user = ["inicio", "home", "registro", "consulta","listado", "actualizar", "recepcionar","login","admision"];
-        public static $dir_admin = ["admin"];
+        public static $dir_admin = ["admin","admision","listado","actualizar", "recepcionar"];
 
         public function index_(){
             return parent::index();

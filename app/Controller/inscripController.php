@@ -28,6 +28,9 @@ class inscripcionController extends inscripcionModel{
         $consulta = mainClass::consulta_simple($sql);
         return $consulta;
     }
+    public function error_alert($error){
+        return mainClass::error_message($error);
+    }
     public function reporte_lista(){
         $consulta = inscripcionModel::reporte_lista_model();
         if($consulta->rowCount() > 0){

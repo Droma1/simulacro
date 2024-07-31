@@ -4,11 +4,13 @@
 
 		require_once "../../database/db.php";
         require_once "../../config/config.php";
+        require_once "../../error_handler.php";
 
 	}else{
 
 		require_once "./database/db.php";
         require_once "./config/config.php";
+        require_once "./error_handler.php";
 
 	}
 
@@ -24,9 +26,7 @@ class mainClass{
 
         }catch (Exception $e){
 
-            echo "Error al conectar a la base de datos error: ".$e->getMessage();
-
-            //sleep(10000);
+            $link = $this->error_message("Error al conectar a la base de datos error: ".$e->getMessage());
 
         }
 
@@ -50,10 +50,8 @@ class mainClass{
             $link = new PDO(SGBD_SQL,USER_SQL,PASS_SQL);
     
         }catch (Exception $e){
-    
-            echo "Error al conectar a la base de datos error: ".$e;
-    
-            //sleep(10000);
+            
+            $link = $this->error_message("Error al conectar a la base de datos error: ".$e->getMessage());
     
         }
     
@@ -68,6 +66,14 @@ class mainClass{
 
         return $respuesta;
 
+    }
+    protected function encryption($string){
+        $pass = password_hash($string,PASSWORD_DEFAULT,['cost'=>12]);
+        return $pass;
+    }
+    protected function verify($string,$data){
+        $pass = password_verify($string,$data);
+        return $pass;
     }
 
     protected function clear_string($cadena){
@@ -106,6 +112,28 @@ class mainClass{
 
         return $cadena;
 
+    }
+    protected function error_message($message){
+        $body_error = '
+            <!-- Flexbox container for aligning the toasts -->
+            <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+
+                <!-- Then put toasts within -->
+                <div class="toast" role="alert" style="opacity: 1 !important;">
+                    <div class="toast-header text-danger">
+                    <span class="rounded me-2 icon-attention"></span>
+                    <strong class="me-auto">Error al enviar</strong>
+                    <small>Hace 2 Seg.</small>
+                    <button type="button" class="btn-close"></button>
+                    </div>
+                    <div class="toast-body">
+                    '.$message.'
+                    </div>
+                </div>
+            </div>
+        ';
+        
+        return $body_error;
     }
     protected function alerts($datos){
         if($datos['Alerta']=="simple"){

@@ -5,6 +5,7 @@
 
     include_once "./routes/web.php";
 
+    include_once "./error_handler.php";
 
 
     $views = new Route_controller();

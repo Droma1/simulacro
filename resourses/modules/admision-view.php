@@ -102,7 +102,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <h4>Total de Recepcionados : <?php echo $total_; ?></h4>
+                <h4 style="text-align:right;">Total de Recepcionados : <?php echo $total_; ?></h4>
             </div>
         </div>
 <br>
