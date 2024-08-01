@@ -485,6 +485,15 @@ class inscripcionController extends inscripcionModel{
             $r_consulta = (array) $consulta->fetch();
             $respuesta = '
                 <!--cuerpo de pdf-->
+                <div class="modal fade show" tabindex="-1" style="display:block;">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Descargue su constancia</h5>
+        <a href="consulta" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+      </div>
+      <div class="modal-body">
+      <!--cuerpo del modal dialog-->
                 <div class="row notify justify-content-center">
                     <div class="col-md-6">
                         <h4><strong>¡IMPORTANTE!</strong> Presentar la siguiente constancia a la oficina de Admisión, Bajo responsabilidad del Postulante <strong><span class="icon-down"></span><span class="icon-down"></span><span class="icon-down"></span></strong></h4>
@@ -573,6 +582,7 @@ class inscripcionController extends inscripcionModel{
                         </div>
                         
                     </div>
+
                 <!--end cuerpo pdf-->
                 <script>
                     $("#generar_pdf").click(function(){
@@ -580,6 +590,12 @@ class inscripcionController extends inscripcionModel{
                         generar();
                     });
                 </script>
+                      </div>
+
+                      <!--fin del cuerpo del modal dialog-->
+    </div>
+  </div>
+</div>
             ';
         }else{
             $respuesta = '
