@@ -1,8 +1,8 @@
 <?php
-/* 
+ /*
 	const SERVER = "localhost";
 
-	const DB = "simulacro";
+	const DB = "simulacro2";
 
 	const USER = "root";
 
@@ -12,7 +12,7 @@
 
 	const SGBD = "mysql:host=".SERVER.";dbname=".DB."; charset=utf8";
 */
-	const SERVER = "201.148.106.60";
+	const SERVER = "201.148.104.204";
 
 	const DB = "unamaded_simulacro";
 
