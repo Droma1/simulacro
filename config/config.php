@@ -1,6 +1,6 @@
 <?php
 
-    const URL = "http://172.17.19.77/simulacro/";//https://SITIO.unamad.edu.pe/  http://lcalhost/sitio/
+    const URL = "http://simulacro.test/";//https://SITIO.unamad.edu.pe/  http://lcalhost/sitio/
 
     const COMPANY = "Admision";
 

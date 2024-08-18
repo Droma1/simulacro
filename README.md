@@ -10,5 +10,6 @@
 # Bootstrap 5.0
 # Css3
 # Mysql
+# SqlServer
 # JsPDF
 # SweetAlert2 JS

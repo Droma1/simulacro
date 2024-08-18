@@ -1,5 +1,5 @@
 <?php
-/* 
+
 	const SERVER = "localhost";
 
 	const DB = "simulacro";
@@ -11,26 +11,15 @@
 
 
 	const SGBD = "mysql:host=".SERVER.";dbname=".DB."; charset=utf8";
-*/
-	const SERVER = "201.148.106.60";
+/*
+#conexion para bd de sql server
+	const SERVER_SQL = 'localhost';
 
-	const DB = "unamaded_simulacro";
+	const DB_SQL = 'simulacro';
 
-	const USER = "unamaded_simulacro";
+	const USER_SQL = 'usuario';
 
-	const PASS = "Unamad2024.";
-
-
-
-	const SGBD = "mysql:host=".SERVER.";dbname=".DB."; charset=utf8";
-
-	const SERVER_SQL = '192.168.254.153';
-
-	const DB_SQL = 'Admision';
-
-	const USER_SQL = 'userConect';
-
-	const PASS_SQL = 'A$U77/%@@%**21?';
+	const PASS_SQL = 'pass';
 
 
 
