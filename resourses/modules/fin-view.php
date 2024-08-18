@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="<?php echo URL ?>public/css/star.css">
 <section class="content paisaje">
     <div class="paisaje">
         <div class="container2 container-star">

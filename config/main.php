@@ -1,18 +1,14 @@
 <?php
 //var_dump($peticionAjax);
 	if($peticionAjax){
-
+        require_once "../../error_handler.php";
 		require_once "../../database/db.php";
         require_once "../../config/config.php";
-        require_once "../../error_handler.php";
-
 	}else{
-
+        require_once "./error_handler.php";
 		require_once "./database/db.php";
         require_once "./config/config.php";
-        require_once "./error_handler.php";
-
-	}
+    }
 
 	
 
