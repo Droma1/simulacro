@@ -1,8 +1,7 @@
 <?php
-
 	const SERVER = "localhost";
 
-	const DB = "simulacro";
+	const DB = "simulacro2";
 
 	const USER = "root";
 

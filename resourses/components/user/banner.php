@@ -5,8 +5,8 @@
                 <h3>¡¡ Simulacro de Examen Ordinario: <label id="countdown"></label> !!</h3>
             </div>
         </div>
-    </div>-->
-</section>
+    </div>
+</section>-->
 <div class="banner">
 <section class="container">
     <br>
